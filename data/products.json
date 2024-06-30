@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-13-og-202006?wid=1200&hei=630&fmt=jpeg&qlt=95&.v=1594225254114",
+    "price": 999.99
+  },
+  {
+    "id": 2,
+    "brand": "Dell",
+    "model": "XPS 13",
+    "image": "https://i.dell.com/sites/csimages/Video_Imagery/all/xps-13-9300-laptop-campaign-hero-504x350-ng.psd",
+    "price": 1199.99
+  },
+  {
+    "id": 3,
+    "brand": "HP",
+    "model": "Spectre x360",
+    "image": "https://www.hp.com/us-en/shop/app/assets/images/product/8QQ07AV_1/center_facing.png?_=1634313813525",
+    "price": 1099.99
+  },
+  {
+    "id": 4,
+    "brand": "Lenovo",
+    "model": "ThinkPad X1 Carbon",
+    "image": "https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-carbon-7th-gen-hero.png?context=bWFzdGVyfHJvb3R8MjczNzI1fGltYWdlL3BuZ3xoZGIvaDg1LzExOTI3NjI3OTQ4NjYyLnBuZ3w1MzQ3ODNkZTliZWM0YjgwZmMzZTMzYTZhM2IzMzYxNzFjNTg0MjQxNzE1ZmE3ZGVhODExNGYyMjRlY2UyMjk0",
+    "price": 1299.99
+  },
+  {
+    "id": 5,
+    "brand": "Asus",
+    "model": "ZenBook 14",
+    "image": "https://dlcdnwebimgs.asus.com/gain/F92D88F1-66B2-4A7E-8081-F94D8F80BB02/w717",
+    "price": 899.99
+  },
+  {
+    "id": 6,
+    "brand": "Acer",
+    "model": "Swift 3",
+    "image": "https://images.acer.com/is/image/acer/Acer-Swift-3-AGW-KSP-01-b?wid=1920&hei=1080&fmt=jpeg&qlt=80,0",
+    "price": 679.99
+  },
+  {
+    "id": 7,
+    "brand": "Microsoft",
+    "model": "Surface Laptop 4",
+    "image": "https://c.s-microsoft.com/en-us/CMSImages/1920_PanelA_Surface_Laptop4.png?version=8a30d808-cf84-bd41-e8c4-e3be77b2b5c2",
+    "price": 999.99
+  },
+  {
+    "id": 8,
+    "brand": "Razer",
+    "model": "Blade 15",
+    "image": "https://assets.razerzone.com/eeimages/products/16929/razer-blade-15-advanced-model-gallery-02.jpg",
+    "price": 2399.99
+  },
+  {
+    "id": 9,
+    "brand": "MSI",
+    "model": "GS66 Stealth",
+    "image": "https://asset.msi.com/global/picture/image/feature/nb/GS66-Stealth/GS66-Stealth-Gallery-02.png",
+    "price": 2099.99
+  },
+  {
+    "id": 10,
+    "brand": "Alienware",
+    "model": "m15 R3",
+    "image": "https://i.dell.com/sites/csimages/Video_Imagery/all/alienware-m15-r3-laptop-campaign-hero-504x350-ng.psd",
+    "price": 1499.99
+  },
+  {
+    "id": 11,
+    "brand": "Samsung",
+    "model": "Galaxy Book Flex",
+    "image": "https://images.samsung.com/is/image/samsung/assets/us/laptops/galaxy-book-flex/galaxy-book-flex-qled-hero-pc.png",
+    "price": 1349.99
+  },
+  {
+    "id": 12,
+    "brand": "LG",
+    "model": "Gram 17",
+    "image": "https://www.lg.com/au/images/laptops/md07518277/gallery/medium01.jpg",
+    "price": 1699.99
+  },
+  {
+    "id": 13,
+    "brand": "Huawei",
+    "model": "MateBook X Pro",
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/en/mkt/pdp/ultrabook/matebook-x-pro-2020/img/design/bgimg-matebook-x-pro-2020.jpg",
+    "price": 1499.99
+  }
+]
