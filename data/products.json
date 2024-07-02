@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "brand": "Apple",
+    "model": "MacBook Air",
+    "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mba15-midnight-select-202306?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1684518479433",
+    "price": 999.99
+  },
+  {
+    "id": 2,
+    "brand": "Dell",
+    "model": "XPS 13",
+    "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-13-9315/media-gallery/notebook-xps-9315-nt-blue-gallery-3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=575&qlt=100,1&resMode=sharp2&size=575,402&chrss=full",
+    "price": 1199.99
+  },
+  {
+    "id": 3,
+    "brand": "HP",
+    "model": "Spectre x360",
+    "image": "https://www.paris.cl/on/demandware.static/-/Sites-paris-marketplace/default/dw82b32811/images/imagenes-productos/800/MKMU/MKMUVALO7R-0400-000.png",
+    "price": 1099.99
+  },
+  {
+    "id": 4,
+    "brand": "Lenovo",
+    "model": "ThinkPad X1 Carbon",
+    "image": "https://p2-ofp.static.pub/fes/cms/2023/02/10/6dmutrro4s0mhknbkz259ck6tce3su835220.png",
+    "price": 1299.99
+  },
+  {
+    "id": 5,
+    "brand": "Asus",
+    "model": "ZenBook 14",
+    "image": "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/16495790_1/w=800,h=800,fit=pad",
+    "price": 899.99
+  },
+  {
+    "id": 6,
+    "brand": "Acer",
+    "model": "Swift 3",
+    "image": "https://inpage.acerchile.cl/site/files/imagenes/media/2024/03/Swift_Go___Dise%C3%B1o.jpg?format=jpeg",
+    "price": 679.99
+  },
+  {
+    "id": 7,
+    "brand": "Microsoft",
+    "model": "Surface Laptop 4",
+    "image": "https://m.media-amazon.com/images/I/41e8kdHOX7L._AC_UF480,480_SR480,480_.jpg",
+    "price": 999.99
+  },
+  {
+    "id": 8,
+    "brand": "Razer",
+    "model": "Blade 15",
+    "image": "https://www.samuraistorejp.cl/wp-content/uploads/2023/05/RZ09-0485ZED3-R3U1-510x510.jpg",
+    "price": 2399.99
+  },
+  {
+    "id": 9,
+    "brand": "MSI",
+    "model": "GS66 Stealth",
+    "image": "https://asset.msi.com/resize/image/global/product/product_16201127146a9e35ad72a89f7fe35093aa45459f1d.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
+    "price": 2099.99
+  },
+  {
+    "id": 10,
+    "brand": "Alienware",
+    "model": "m15 R3",
+    "image": "https://media.solotodo.com/media/products/1240760_picture_1601663942.jpg",
+    "price": 1499.99
+  },
+  {
+    "id": 11,
+    "brand": "Samsung",
+    "model": "Galaxy Book Flex",
+    "image": "https://i.blogs.es/a222cc/samsung-galaxy-book-flex-5g-05/1366_2000.jpg",
+    "price": 1349.99
+  },
+  {
+    "id": 12,
+    "brand": "LG",
+    "model": "Gram 17",
+    "image": "https://www.lg.com/content/dam/channel/wcms/es/images/ordenadores/17z90p-g_aa78b_eees_es_c/BASIC_450.jpg",
+    "price": 1699.99
+  },
+  {
+    "id": 13,
+    "brand": "Huawei",
+    "model": "MateBook X Pro",
+    "image": "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/pc/matebook-x-pro-2020/img/matebook-x-pro-2020-emerald-green.png",
+    "price": 1499.99
+  }
+]
