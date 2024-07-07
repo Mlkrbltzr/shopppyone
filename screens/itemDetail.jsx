@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   },
   size: {
     borderWidth: 2,
-    borderColor: theme.colors.gray[500],
+    borderColor: theme.colors.woodsmoke[500],
     height: 40,
     width: 40,
     justifyContent: 'center',
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
   },
   sizeText: {
-    color: theme.colors.gray[500],
+    color: theme.colors.woodsmoke[500],
     fontWeight: 'bold',
   },
   selectedSizeText: {

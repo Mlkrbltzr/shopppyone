@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   box: {
-    borderColor: 'gray',
+    borderColor: 'woodsmoke',
     borderRadius: 4,
     borderWidth: 1,
     padding: 8,

@@ -11,7 +11,7 @@ export const SearchInput = props => (
 
 const styles = StyleSheet.create({
   searchInput: {
-    borderColor: theme.colors.gray[200],
+    borderColor: theme.colors.woodsmoke[200],
     borderRadius: 8,
     borderWidth: 1,
     flexDirection: 'row',

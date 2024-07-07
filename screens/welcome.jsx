@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   text: {
-    color: theme.colors.gray[500],
+    color: theme.colors.woodsmoke[500],
     fontSize: 16,
   },
 })

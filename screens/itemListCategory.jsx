@@ -60,7 +60,7 @@ export const ItemListCategory = () => {
     <View style={styles.itemListCategories}>
       <SearchInput
         onChangeText={handleSearch}
-        placeholder='Buscar zapatillas aquí...'
+        placeholder='Busca aquí...'
         value={textToSearch}
       />
       <FlatList

@@ -110,6 +110,6 @@ const styles = StyleSheet.create({
     fontSize: 24,
   },
   text: {
-    color: theme.colors.gray[500],
+    color: theme.colors.woodsmoke[500],
   },
 })
