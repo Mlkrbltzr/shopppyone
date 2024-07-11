@@ -16,7 +16,6 @@ export const CartItem = ({
     <View style={styles.info}>
       <Text>{brand}</Text>
       <Text>{model}</Text>
-      <Text>Talle: {size}</Text>
       <Text>Cantidad: {quantity}</Text>
       <Text>{formatPrice(price)}</Text>
       <Pressable style={styles.delete} onPress={() => onDelete(id)}>

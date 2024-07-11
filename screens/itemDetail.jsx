@@ -1,6 +1,5 @@
 import {
   Image,
-  Pressable,
   ScrollView,
   StyleSheet,
   Text,
@@ -9,7 +8,7 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context'
 import products from '../data/products.json'
 import { theme } from '../configs/theme'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { formatPrice } from '../utils/price'
 import { Button } from '../components/button'
@@ -20,18 +19,12 @@ export const ItemDetail = () => {
   const { params } = useRoute()
   const { goBack, setOptions } = useNavigation()
   const dispatch = useDispatch()
-  const [selectedSize, setSelectedSize] = useState()
 
   const item = products.find(product => product.id === params.productId)
   const { brand, image, model, price } = item
-  const SIZES = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-
-  const handleSize = size => {
-    setSelectedSize(size)
-  }
 
   const handleAddToCart = () => {
-    dispatch(addItem({ ...item, size: selectedSize }))
+    dispatch(addItem({ ...item }))
     goBack()
   }
 
@@ -53,28 +46,6 @@ export const ItemDetail = () => {
             <Text style={styles.text}>{brand}</Text>
             <Text style={styles.text}>{model}</Text>
             <Text style={styles.text}>{formatPrice(price)}</Text>
-          </View>
-          <Text style={styles.titleSection}>Size</Text>
-          <View style={styles.sizes}>
-            {SIZES.map(size => {
-              const isSelected = selectedSize === size
-
-              return (
-                <Pressable
-                  key={size}
-                  style={isSelected ? styles.selectedSize : styles.size}
-                  onPress={() => handleSize(size)}
-                >
-                  <Text
-                    style={
-                      isSelected ? styles.selectedSizeText : styles.sizeText
-                    }
-                  >
-                    {size}
-                  </Text>
-                </Pressable>
-              )
-            })}
           </View>
           <Button onPress={handleAddToCart}>Agregar al carrito</Button>
         </View>
@@ -104,36 +75,5 @@ const styles = StyleSheet.create({
   },
   text: {
     textTransform: 'capitalize',
-  },
-  sizes: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    gap: 16,
-  },
-  size: {
-    borderWidth: 2,
-    borderColor: theme.colors.woodsmoke[500],
-    height: 40,
-    width: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 40,
-  },
-  selectedSize: {
-    borderColor: theme.colors.primary[600],
-    borderWidth: 2,
-    height: 40,
-    width: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 40,
-  },
-  sizeText: {
-    color: theme.colors.woodsmoke[500],
-    fontWeight: 'bold',
-  },
-  selectedSizeText: {
-    color: theme.colors.primary[600],
-    fontWeight: 'bold',
   },
 })

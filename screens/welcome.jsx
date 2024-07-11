@@ -1,39 +1,39 @@
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { Alert, Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import { Button } from '../components/button'
-import { theme } from '../configs/theme'
-import { useNavigation } from '@react-navigation/native'
-import { ROUTE } from '../navigation/routes'
+import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import { Button } from '../components/button';
+import { useNavigation } from '@react-navigation/native';
+import { ROUTE } from '../navigation/routes';
+import { theme } from '../configs/theme';
 
 export const Welcome = () => {
-  const { navigate } = useNavigation()
+  const navigation = useNavigation();
 
-  const handlePress = () => navigate(ROUTE.HOME)
+  const handlePress = () => navigation.navigate(ROUTE.LOGIN); // Navegar a Login al presionar
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <Image source={require('../assets/Welcome/icon.png')} />
       <View style={styles.texts}>
         <Text style={styles.title}>Shoppyone</Text>
-        <Text style={styles.text}></Text>
+        <Text style={styles.text}>Tipea con gusto</Text>
       </View>
       <Button onPress={handlePress}>Ingresar</Button>
     </SafeAreaView>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   safeArea: {
     alignItems: 'center',
     backgroundColor: theme.colors.white,
     flex: 1,
-    gap: 32,
     justifyContent: 'center',
     padding: 16,
   },
   texts: {
     alignItems: 'center',
-    gap: 4,
+    marginBottom: 32,
   },
   title: {
     fontSize: 64,
@@ -43,4 +43,6 @@ const styles = StyleSheet.create({
     color: theme.colors.woodsmoke[500],
     fontSize: 16,
   },
-})
+});
+
+export default Welcome;

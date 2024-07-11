@@ -1,51 +1,64 @@
-import { Alert, StyleSheet, Text, View } from 'react-native'
-import { Input } from '../components/input'
-import { Button } from '../components/button'
-import { useNavigation } from '@react-navigation/native'
-import { ROUTE } from '../navigation/routes'
-import { useLoginMutation } from '../services/authService'
-import { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { setUser } from '../features/auth/authSlice'
-import { insertSession } from '../db'
+import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Input } from '../components/input';
+import { Button } from '../components/button';
+import { useNavigation } from '@react-navigation/native';
+import { ROUTE } from '../navigation/routes';
+import { useLoginMutation } from '../services/authService';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../features/auth/authSlice';
+import { insertSession, init as initDb } from '../db'; // Importa init desde db
 
 export const Login = () => {
-  const { navigate } = useNavigation()
-  const dispatch = useDispatch()
-  const [triggerLogin, result] = useLoginMutation()
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
+  const { navigate } = useNavigation();
+  const dispatch = useDispatch();
+  const [triggerLogin, result] = useLoginMutation();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const initApp = async () => {
+      try {
+        await initDb(); // Inicializa la base de datos antes de cualquier operación
+        console.log('Base de datos inicializada');
+      } catch (error) {
+        console.error('Error al inicializar la base de datos:', error);
+      }
+    };
+
+    initApp();
+  }, []);
 
   const handleLogin = async () => {
     try {
-      setIsLoading(true)
-      await triggerLogin({ email, password })
+      setIsLoading(true);
+      await triggerLogin({ email, password });
     } catch (error) {
-      console.error('Error en la solicitud de ingreso:', error)
-      Alert.alert('Error', 'Correo o contraseña incorrectos')
+      console.error('Error en la solicitud de ingreso:', error);
+      Alert.alert('Error', 'Correo o contraseña incorrectos');
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
-  const goToSignUp = () => navigate(ROUTE.SIGN_UP)
+  const goToSignUp = () => navigate(ROUTE.SIGN_UP);
 
   useEffect(() => {
     if (result.data) {
-      const { email, localId, idToken: token } = result.data
-      console.log('token =>', token)
+      const { email, localId, idToken: token } = result.data;
+      console.log('token =>', token);
 
-      dispatch(setUser({ email, localId, token }))
-      insertSession({ email, localId, token })
+      dispatch(setUser({ email, localId, token }));
+      insertSession({ email, localId, token });
     }
-  }, [result.data])
+  }, [result.data]);
 
   return (
     <View style={styles.login}>
       <View style={styles.section}>
         <Input
-          label='Correo electronico'
+          label='Correo electrónico'
           placeholder='tolkien@shoppyone.com'
           value={email}
           onChangeText={setEmail}
@@ -63,11 +76,11 @@ export const Login = () => {
       </View>
       <View style={styles.section}>
         <Text>No tienes cuenta?</Text>
-        <Button onPress={goToSignUp}>Registrate Ahora</Button>
+        <Button onPress={goToSignUp}>Regístrate Ahora</Button>
       </View>
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
   login: {
@@ -83,4 +96,6 @@ const styles = StyleSheet.create({
     width: '100%',
     gap: 16,
   },
-})
+});
+
+export default Login;
